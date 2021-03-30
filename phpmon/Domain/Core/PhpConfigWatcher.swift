@@ -25,6 +25,8 @@ class PhpConfigWatcher {
         self.addWatcher(for: self.url.appendingPathComponent("php.ini"), eventMask: .write)
         
         // Add a watcher for conf.d (in case a new file is added or a file is deleted)
+        // TODO: Make sure that the contents of the conf.d folder is checked each time... this might mean
+        // that watchers are due for deletion / need to be created
         self.addWatcher(for: self.url.appendingPathComponent("conf.d"), eventMask: .all)
         
         // Scan the conf.d folder for .ini files, and add a watcher for each file
