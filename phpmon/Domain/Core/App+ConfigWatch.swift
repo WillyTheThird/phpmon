@@ -15,6 +15,7 @@ extension App {
         self.watcher = PhpConfigWatcher(for: url)
         
         self.watcher.didChange = { url in
+            // TODO: Make sure this is debounced, because a single process may update the config file many times; this occurs when installing Xdebug, for example
             print("Something has changed in: \(url)")
             MainMenu.shared.reloadPhpMonitorMenuInBackground()
         }
