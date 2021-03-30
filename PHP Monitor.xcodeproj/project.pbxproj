@@ -38,6 +38,8 @@
 		C48D0CA325CC992000CC7490 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48D0CA225CC992000CC7490 /* StatsView.swift */; };
 		C49EAB46259FC305007F6C3B /* Paths.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49EAB45259FC305007F6C3B /* Paths.swift */; };
 		C4ACA38F25C754C100060C66 /* PhpExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ACA38E25C754C100060C66 /* PhpExtension.swift */; };
+		C4AE21582613B7880007072D /* PhpConfigWatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AE21572613B7880007072D /* PhpConfigWatcher.swift */; };
+		C4AE215E2613C7290007072D /* App+ConfigWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AE215D2613C7290007072D /* App+ConfigWatch.swift */; };
 		C4D8016622B1584700C6DA1B /* Startup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D8016522B1584700C6DA1B /* Startup.swift */; };
 		C4EE188422D3386B00E126E5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EE188322D3386B00E126E5 /* Constants.swift */; };
 		C4F7809625D7FBF8000DBC97 /* Shell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41C1B4622B009A400E7CF16 /* Shell.swift */; };
@@ -112,6 +114,8 @@
 		C48D0CA225CC992000CC7490 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
 		C49EAB45259FC305007F6C3B /* Paths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paths.swift; sourceTree = "<group>"; };
 		C4ACA38E25C754C100060C66 /* PhpExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhpExtension.swift; sourceTree = "<group>"; };
+		C4AE21572613B7880007072D /* PhpConfigWatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhpConfigWatcher.swift; sourceTree = "<group>"; };
+		C4AE215D2613C7290007072D /* App+ConfigWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App+ConfigWatch.swift"; sourceTree = "<group>"; };
 		C4D8016522B1584700C6DA1B /* Startup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Startup.swift; sourceTree = "<group>"; };
 		C4E713562570150F00007428 /* SECURITY.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = SECURITY.md; sourceTree = "<group>"; };
 		C4E713572570151400007428 /* docs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = docs; sourceTree = "<group>"; };
@@ -203,11 +207,11 @@
 		C41E181722CB61EB0072CF09 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				5420395726135DB800FB00FA /* Preferences */,
 				C4F7808A25D7F918000DBC97 /* Terminal */,
 				C4B13B1D25C4915000548C3A /* Core */,
 				C47331A0247093AC009A0597 /* Menu */,
 				C4811D2822D70D9C00B5F6B3 /* Helpers */,
+				5420395726135DB800FB00FA /* Preferences */,
 				C4F8C0A222D4F100002EFE61 /* Extensions */,
 			);
 			path = Domain;
@@ -241,6 +245,8 @@
 			children = (
 				C41C1B3C22B0098000E7CF16 /* Main.storyboard */,
 				C4811D2322D70A4700B5F6B3 /* App.swift */,
+				C4AE215D2613C7290007072D /* App+ConfigWatch.swift */,
+				C4AE21572613B7880007072D /* PhpConfigWatcher.swift */,
 				C41C1B4A22B019FF00E7CF16 /* PhpInstallation.swift */,
 				C4ACA38E25C754C100060C66 /* PhpExtension.swift */,
 				C412E5FB25700D5300A1FB67 /* HomebrewPackage.swift */,
@@ -392,6 +398,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4AE21582613B7880007072D /* PhpConfigWatcher.swift in Sources */,
 				C4ACA38F25C754C100060C66 /* PhpExtension.swift in Sources */,
 				C4D8016622B1584700C6DA1B /* Startup.swift in Sources */,
 				C4F8C0A422D4F12C002EFE61 /* DateExtension.swift in Sources */,
@@ -411,6 +418,7 @@
 				C49EAB46259FC305007F6C3B /* Paths.swift in Sources */,
 				C476FF9822B0DD830098105B /* Alert.swift in Sources */,
 				C474B00624C0E98C00066A22 /* LocalNotification.swift in Sources */,
+				C4AE215E2613C7290007072D /* App+ConfigWatch.swift in Sources */,
 				C48D0C9625CC80B100CC7490 /* HeaderView.swift in Sources */,
 				C47331A2247093B7009A0597 /* StatusMenu.swift in Sources */,
 				C46FA23F246C358E00944F05 /* StringExtension.swift in Sources */,

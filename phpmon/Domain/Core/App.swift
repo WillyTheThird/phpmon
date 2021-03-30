@@ -34,7 +34,11 @@ class App {
     /**
      The currently active installation of PHP.
      */
-    var currentInstall: PhpInstallation? = nil
+    var currentInstall: PhpInstallation? = nil {
+        didSet {
+            handlePhpConfigWatcher()
+        }
+    }
     
     /**
      All available versions of PHP.
@@ -66,4 +70,10 @@ class App {
      */
     var brewPhpVersion: String = "8.0"
     
+    // MARK: - App Watchers
+    
+    /**
+     The `PhpConfigWatcher` is responsible for watching the `.ini` files and the `.conf.d` folder.
+     */
+    var watcher: PhpConfigWatcher!
 }
