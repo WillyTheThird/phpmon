@@ -119,7 +119,7 @@ class Actions {
     // MARK: Common Shell Commands
     
     /**
-     Runs a `valet` command. Can run as superuser.
+     Runs a `valet` command.
      */
     public static func valet(_ command: String)
     {
