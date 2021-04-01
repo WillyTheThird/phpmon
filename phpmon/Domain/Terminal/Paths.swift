@@ -35,6 +35,7 @@ class Paths {
         }
         
         print("Homebrew directory: \(baseDir)")
+        print("Adding to PATH of /bin/sh...")
     }
     
     // - MARK: Binaries

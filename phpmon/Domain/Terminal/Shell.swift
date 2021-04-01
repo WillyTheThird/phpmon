@@ -23,6 +23,8 @@ class Shell {
     
     var shell = "/bin/sh"
     
+    var path = "$PATH"
+    
     init() {
         // Determine if we're using macOS Catalina or newer (that support /bin/zsh as default shell)
         let at_least_10_15 = ProcessInfo.processInfo.isOperatingSystemAtLeast(
@@ -61,7 +63,8 @@ class Shell {
         let pipe = Pipe()
         
         task.launchPath = self.shell
-        task.arguments = ["--login", "-c", command]
+        
+        task.arguments = ["--login", "-c", "export PATH=\(path) && \(command)"]
         task.standardOutput = pipe
         task.launch()
 

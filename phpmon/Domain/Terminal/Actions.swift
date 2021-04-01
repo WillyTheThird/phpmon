@@ -123,7 +123,6 @@ class Actions {
      */
     public static func valet(_ command: String)
     {
-        // Sadly, this does not seem to work?
         Shell.run("\(Paths.valet) \(command)")
     }
     

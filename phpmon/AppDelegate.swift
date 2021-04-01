@@ -45,9 +45,14 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
      */
     override init() {
         self.sharedShell = Shell.user
+        
         self.state = App.shared
         self.menu = MainMenu.shared
         self.paths = Paths.shared
+        
+        self.sharedShell.path = "\(Paths.binPath):$PATH"
+        print("The PATH is: \(Shell.pipe("echo $PATH"))")
+        
         super.init()
     }
     
