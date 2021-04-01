@@ -27,7 +27,10 @@ class Actions {
         versions.forEach { (string) in
             let version = string.components(separatedBy: "php@")[1]
             // Only append the version if it doesn't already exist (avoid dupes)
-            if !versionsOnly.contains(version) && Constants.SupportedPhpVersions.contains(version) {
+            if !versionsOnly.contains(version)
+                // and make sure that the version is supported
+                && Constants.SupportedPhpVersions.contains(version)
+            {
                 versionsOnly.append(version)
             }
         }
@@ -62,27 +65,9 @@ class Actions {
         brew("services restart dnsmasq", sudo: true)
     }
     
-    /**
-     Switching to a new PHP version involves:
-     - unlinking the current version
-     - stopping the active services
-     - linking the new desired version
-     
-     Please note that depending on which version is installed,
-     the version that is switched to may or may not be identical to `php` (without @version).
-     */
     public static func switchToPhpVersion(version: String, availableVersions: [String])
     {
-        availableVersions.forEach { (available) in
-            let formula = (available == App.shared.brewPhpVersion) ? "php" : "php@\(available)"
-            brew("unlink \(formula)")
-            brew("services stop \(formula)", sudo: true)
-        }
-        
-        let formula = (version == App.shared.brewPhpVersion) ? "php" : "php@\(version)"
-        
-        brew("link \(formula) --overwrite --force")
-        brew("services start \(formula)", sudo: true)
+        valet("use php@\(version)")
     }
     
     // MARK: - Finding Config Files
@@ -132,6 +117,15 @@ class Actions {
     }
     
     // MARK: Common Shell Commands
+    
+    /**
+     Runs a `valet` command. Can run as superuser.
+     */
+    public static func valet(_ command: String)
+    {
+        // Sadly, this does not seem to work?
+        Shell.run("\(Paths.valet) \(command)")
+    }
     
     /**
      Runs a `brew` command. Can run as superuser.

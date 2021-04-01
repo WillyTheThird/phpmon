@@ -39,12 +39,20 @@ class Paths {
     
     // - MARK: Binaries
     
+    public static var valet: String {
+        return "/Users/\(whoami)/.composer/vendor/bin/valet"
+    }
+    
     public static var brew: String {
         return "\(binPath)/brew"
     }
     
     public static var php: String {
         return "\(binPath)/php"
+    }
+    
+    public static var whoami: String {
+        return String(Shell.pipe("whoami").split(separator: "\n")[0])
     }
     
     // - MARK: Paths
