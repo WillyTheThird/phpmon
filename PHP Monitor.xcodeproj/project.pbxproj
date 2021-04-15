@@ -19,6 +19,9 @@
 		C41C1B4922B00A9800E7CF16 /* MenuBarImageGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41C1B4822B00A9800E7CF16 /* MenuBarImageGenerator.swift */; };
 		C41C1B4B22B019FF00E7CF16 /* PhpInstallation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41C1B4A22B019FF00E7CF16 /* PhpInstallation.swift */; };
 		C41C1B4D22B0215A00E7CF16 /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41C1B4C22B0215A00E7CF16 /* Actions.swift */; };
+		C41CCFEB2628C77F0065BBED /* Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41CCFEA2628C77F0065BBED /* Preview.swift */; };
+		C41CCFF22628CF4C0065BBED /* PMHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41CCFF12628CF4C0065BBED /* PMHeaderView.swift */; };
+		C41CCFF82628CF590065BBED /* PMStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41CCFF72628CF590065BBED /* PMStatsView.swift */; };
 		C42295DD2358D02000E263B2 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42295DC2358D02000E263B2 /* Command.swift */; };
 		C4232EE52612526500158FC6 /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = C4232EE42612526500158FC6 /* Credits.html */; };
 		C42759672627662800093CAE /* NSMenuExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42759662627662800093CAE /* NSMenuExtension.swift */; };
@@ -101,6 +104,9 @@
 		C41C1B4822B00A9800E7CF16 /* MenuBarImageGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarImageGenerator.swift; sourceTree = "<group>"; };
 		C41C1B4A22B019FF00E7CF16 /* PhpInstallation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhpInstallation.swift; sourceTree = "<group>"; };
 		C41C1B4C22B0215A00E7CF16 /* Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
+		C41CCFEA2628C77F0065BBED /* Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preview.swift; sourceTree = "<group>"; };
+		C41CCFF12628CF4C0065BBED /* PMHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMHeaderView.swift; sourceTree = "<group>"; };
+		C41CCFF72628CF590065BBED /* PMStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMStatsView.swift; sourceTree = "<group>"; };
 		C42295DC2358D02000E263B2 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 		C4232EE42612526500158FC6 /* Credits.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = Credits.html; sourceTree = "<group>"; };
 		C42759662627662800093CAE /* NSMenuExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMenuExtension.swift; sourceTree = "<group>"; };
@@ -213,6 +219,16 @@
 			path = phpmon;
 			sourceTree = "<group>";
 		};
+		C41CCFF02628CF240065BBED /* SwiftUI Previews */ = {
+			isa = PBXGroup;
+			children = (
+				C41CCFEA2628C77F0065BBED /* Preview.swift */,
+				C41CCFF12628CF4C0065BBED /* PMHeaderView.swift */,
+				C41CCFF72628CF590065BBED /* PMStatsView.swift */,
+			);
+			path = "SwiftUI Previews";
+			sourceTree = "<group>";
+		};
 		C41E181722CB61EB0072CF09 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +238,7 @@
 				C47331A0247093AC009A0597 /* Menu */,
 				C4811D2822D70D9C00B5F6B3 /* Helpers */,
 				C4F8C0A222D4F100002EFE61 /* Extensions */,
+				C41CCFF02628CF240065BBED /* SwiftUI Previews */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -420,6 +437,7 @@
 				5420395926135DC100FB00FA /* PrefsVC.swift in Sources */,
 				C41C1B4722B009A400E7CF16 /* Shell.swift in Sources */,
 				C41C1B4D22B0215A00E7CF16 /* Actions.swift in Sources */,
+				C41CCFF82628CF590065BBED /* PMStatsView.swift in Sources */,
 				C48D0CA325CC992000CC7490 /* StatsView.swift in Sources */,
 				C42295DD2358D02000E263B2 /* Command.swift in Sources */,
 				C4811D2422D70A4700B5F6B3 /* App.swift in Sources */,
@@ -430,9 +448,11 @@
 				C412E5FC25700D5300A1FB67 /* HomebrewPackage.swift in Sources */,
 				C41C1B3722B0097F00E7CF16 /* AppDelegate.swift in Sources */,
 				C42759672627662800093CAE /* NSMenuExtension.swift in Sources */,
+				C41CCFF22628CF4C0065BBED /* PMHeaderView.swift in Sources */,
 				C41C1B4B22B019FF00E7CF16 /* PhpInstallation.swift in Sources */,
 				C49EAB46259FC305007F6C3B /* Paths.swift in Sources */,
 				C476FF9822B0DD830098105B /* Alert.swift in Sources */,
+				C41CCFEB2628C77F0065BBED /* Preview.swift in Sources */,
 				C474B00624C0E98C00066A22 /* LocalNotification.swift in Sources */,
 				C48D0C9625CC80B100CC7490 /* HeaderView.swift in Sources */,
 				C47331A2247093B7009A0597 /* StatusMenu.swift in Sources */,
